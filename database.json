@@ -1,0 +1,9 @@
+[
+    {
+        "uuid": "00000000-0000-0000-0000-000000000000",
+        "idea": "start with a boilerplate",
+        "program": "print('Hello, this is the initial boilerplate program')",
+        "result": {"score": 0.0, "verified": false, "notes": "This is a base seed program."},
+        "parent_uuid": null
+    }
+]
