@@ -5,10 +5,10 @@ import random
 import os
 from google import genai
 
-from evaluation import execute_evaluator2
+# from evaluation import execute_evaluator
 
 DATABASE_FILE = 'database.json'
-GEMINI_API_KEY = os.environ["GEMINI_API_KEY"] or "YOUR_GEMINI_API_KEY"
+GEMINI_API_KEY = os.environ.get("GEMINI_API_KEY", "YOUR_GEMINI_API_KEY")
 gemini = genai.Client(api_key=GEMINI_API_KEY)
 # --- Database Management ---
 
@@ -123,7 +123,7 @@ def generate_with_llm(prompt):
     """Generates a code modification (diff) using the LLM.
        [cite: 53, 54, 55, 81, 106, 107, 108, 109]
     """
-    response = gemini.models.generate_content(model="gemini-2.0-flash", contents=prompt)
+    response = gemini.models.generate_content(model="gemini-2.5-flash-preview-04-17", contents=prompt)
     diff = response.text
     return diff
 
@@ -186,9 +186,10 @@ def execute_evaluator(child_program_str):
         
         temp_module = {}
         exec(child_program_str, temp_module)
-        output = temp_module.get('fib', lambda: None)(8) 
+        output = temp_module.get('fib', lambda: None)(20)
         results["output_value"] = output
-        results["is_successful"] = (output == 21)
+        results["is_successful"] = (output == 6765)
+
         results["debug_logs"] = "Evaluation completed successfully."
         results["time_taken"] = time.time() - start_time
     except Exception as e:
@@ -261,6 +262,6 @@ if __name__ == "__main__":
     if GEMINI_API_KEY == "YOUR_GEMINI_API_KEY":
         print("Warning: GEMINI_API_KEY is not set. LLM calls will be simulated.")
 
-    evolution_loop(generations=1) 
+    evolution_loop(generations=3)
 
     print("\nEvolution loop finished.")
