@@ -18,9 +18,9 @@ from functools import lru_cache
 
 
 DEFAULT_INITIAL_PROGRAM = """
-# Initial seed program – intentionally naive.
-def fib(n):
-    pass  # LLM will improve this
+# Initial seed program - intentionally naive.
+def hello():
+    print("Hello, world!")
 """
 @lru_cache(maxsize=None)
 def fib(n):
@@ -42,6 +42,7 @@ def main() -> None:
     if os.environ.get("GEMINI_API_KEY", "YOUR_GEMINI_API_KEY") == "YOUR_GEMINI_API_KEY":
         print("Warning: GEMINI_API_KEY is not set. LLM calls will be simulated.")
 
+    goal = "Improve the implementation so that fib(n) returns the nth Fibonacci number."
     # custom evaluator for Fibonacci
     def _fib_test(mod):
         N = 30
@@ -54,7 +55,7 @@ def main() -> None:
     fib_evaluator = make_eval(_fib_test)
 
     evolution_run(
-        task_description="Improve the implementation so that fib(n) returns the nth Fibonacci number.",
+        task_description=goal,
         prompt_builder=basic_diff_prompt,
         evaluator=fib_evaluator,
         initial_program=textwrap.dedent(DEFAULT_INITIAL_PROGRAM).lstrip(),
