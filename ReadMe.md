@@ -4,17 +4,9 @@ An open-source implementation of the AlphaEvolve system described in the Google 
 
 ![OpenEvolve Logo](openevolve-logo.png)
 
-<<<<<<< HEAD
 ## Overview
 
 OpenEvolve is an evolutionary coding agent that uses Large Language Models to optimize code through an iterative process. It orchestrates a pipeline of LLM-based code generation, evaluation, and selection to continuously improve programs for a variety of tasks.
-=======
-# TODO
-- improve the eval function
-- try to max out this agent with asyncio for throughput and not necessarily any single parts execution
-- clover
-- maybe better DB and prompting(ensemble) for better quality ideas and more breadth.
->>>>>>> af0eb0e07d453fc29048745386f619f6df559345
 
 Key features:
 - Evolution of entire code files, not just single functions
@@ -24,7 +16,6 @@ Key features:
 - Flexible prompt engineering
 - Distributed evaluation
 
-<<<<<<< HEAD
 ## How It Works
 
 OpenEvolve follows an evolutionary approach with the following components:
@@ -35,13 +26,9 @@ OpenEvolve follows an evolutionary approach with the following components:
 2. **LLM Ensemble**: Generates code modifications via an ensemble of language models
 3. **Evaluator Pool**: Tests generated programs and assigns scores
 4. **Program Database**: Stores programs and their evaluation metrics, guiding future evolution
-=======
-search space targets:
->>>>>>> af0eb0e07d453fc29048745386f619f6df559345
 
 The controller orchestrates interactions between these components in an asynchronous pipeline, maximizing throughput to evaluate as many candidate solutions as possible.
 
-<<<<<<< HEAD
 ## Getting Started
 
 ### Installation
@@ -228,7 +215,3 @@ If you use OpenEvolve in your research, please cite:
   url = {https://github.com/codelion/openevolve}
 }
 ```
-=======
-compression
-optimization
->>>>>>> af0eb0e07d453fc29048745386f619f6df559345
