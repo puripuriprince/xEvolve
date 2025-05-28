@@ -15,9 +15,9 @@ import uuid
 from pathlib import Path
 from typing import Any, Callable, Dict, List, Optional, Tuple, Union
 
-from openevolve.config import EvaluatorConfig
-from openevolve.llm.ensemble import LLMEnsemble
-from openevolve.utils.async_utils import TaskPool, run_in_executor
+from xEvolve.config import EvaluatorConfig
+from xEvolve.llm.ensemble import LLMEnsemble
+from xEvolve.utils.async_utils import TaskPool, run_in_executor
 
 logger = logging.getLogger(__name__)
 

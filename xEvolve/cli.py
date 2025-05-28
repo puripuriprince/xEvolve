@@ -9,8 +9,8 @@ import os
 import sys
 from typing import Dict, List, Optional
 
-from openevolve import OpenEvolve
-from openevolve.config import Config, load_config
+from xEvolve import xEvolve
+from xEvolve.config import Config, load_config
 
 logger = logging.getLogger(__name__)
 
@@ -99,7 +99,7 @@ async def main_async() -> int:
 
     # Initialize OpenEvolve
     try:
-        openevolve = OpenEvolve(
+        openevolve = xEvolve(
             initial_program_path=args.initial_program,
             evaluation_file=args.evaluation_file,
             config=config,

@@ -1,4 +1,20 @@
-# OpenEvolve
+# xEvolve
+
+installation steps
+
+git clone xEvolve
+cd xEvolve
+
+uv venv
+source .venv/bin/activate
+
+uv pip install -e .
+
+
+to use
+'''
+python3 xevolve-run.py path_to/initial_program.py path_to/evaluator.py --config path_to/config_phase_1.yaml --iterations 5
+'''
 
 An open-source implementation of the AlphaEvolve system described in the Google DeepMind paper "AlphaEvolve: A coding agent for scientific and algorithmic discovery" (2025).
 

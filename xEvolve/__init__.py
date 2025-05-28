@@ -1,9 +1,9 @@
 """
-OpenEvolve: An open-source implementation of AlphaEvolve
+xEvolve: An open-source implementation of AlphaEvolve
 """
 
 __version__ = "0.1.0"
 
-from openevolve.controller import OpenEvolve
+from xEvolve.controller import xEvolve
 
-__all__ = ["OpenEvolve"]
+__all__ = ["xEvolve"]

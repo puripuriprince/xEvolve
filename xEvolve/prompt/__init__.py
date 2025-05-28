@@ -2,7 +2,7 @@
 Prompt module initialization
 """
 
-from openevolve.prompt.sampler import PromptSampler
-from openevolve.prompt.templates import TemplateManager
+from xEvolve.prompt.sampler import PromptSampler
+from xEvolve.prompt.templates import TemplateManager
 
 __all__ = ["PromptSampler", "TemplateManager"]

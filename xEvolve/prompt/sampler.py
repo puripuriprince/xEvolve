@@ -6,8 +6,8 @@ import logging
 import random
 from typing import Any, Dict, List, Optional, Tuple, Union
 
-from openevolve.config import PromptConfig
-from openevolve.prompt.templates import TemplateManager
+from xEvolve.config import PromptConfig
+from xEvolve.prompt.templates import TemplateManager
 
 logger = logging.getLogger(__name__)
 

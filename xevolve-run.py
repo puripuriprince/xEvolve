@@ -3,7 +3,7 @@
 Entry point script for OpenEvolve
 """
 import sys
-from openevolve.cli import main
+from xEvolve.cli import main
 
 if __name__ == "__main__":
     sys.exit(main())

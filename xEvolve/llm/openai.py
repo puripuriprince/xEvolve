@@ -9,8 +9,8 @@ from typing import Any, Dict, List, Optional, Union
 
 import openai
 
-from openevolve.config import LLMConfig
-from openevolve.llm.base import LLMInterface
+from xEvolve.config import LLMConfig
+from xEvolve.llm.base import LLMInterface
 
 logger = logging.getLogger(__name__)
 

@@ -1,5 +1,5 @@
 """
-Program database for OpenEvolve
+Program database for xEvolve
 """
 
 import json
@@ -13,8 +13,8 @@ from typing import Any, Dict, List, Optional, Set, Tuple, Union
 
 import numpy as np
 
-from openevolve.config import DatabaseConfig
-from openevolve.utils.code_utils import calculate_edit_distance
+from xEvolve.config import DatabaseConfig
+from xEvolve.utils.code_utils import calculate_edit_distance
 
 logger = logging.getLogger(__name__)
 

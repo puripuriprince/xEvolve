@@ -11,12 +11,12 @@ import uuid
 from pathlib import Path
 from typing import Any, Dict, List, Optional, Tuple, Union
 
-from openevolve.config import Config, load_config
-from openevolve.database import Program, ProgramDatabase
-from openevolve.evaluator import Evaluator
-from openevolve.llm.ensemble import LLMEnsemble
-from openevolve.prompt.sampler import PromptSampler
-from openevolve.utils.code_utils import (
+from xEvolve.config import Config, load_config
+from xEvolve.database import Program, ProgramDatabase
+from xEvolve.evaluator import Evaluator
+from xEvolve.llm.ensemble import LLMEnsemble
+from xEvolve.prompt.sampler import PromptSampler
+from xEvolve.utils.code_utils import (
     apply_diff,
     extract_code_language,
     extract_diffs,
@@ -28,9 +28,9 @@ from openevolve.utils.code_utils import (
 logger = logging.getLogger(__name__)
 
 
-class OpenEvolve:
+class xEvolve:
     """
-    Main controller for OpenEvolve
+    Main controller for xEvolve
 
     Orchestrates the evolution process, coordinating between the prompt sampler,
     LLM ensemble, evaluator, and program database.
